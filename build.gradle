@@ -12,6 +12,9 @@ repositories {
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    implementation 'com.h2database:h2:2.3.232'
+    implementation 'com.google.code.gson:gson:2.13.1'
 }
 
 test {
