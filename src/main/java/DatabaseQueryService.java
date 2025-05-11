@@ -4,10 +4,12 @@ import utils.FileReader;
 import java.sql.*;
 import java.util.*;
 import java.util.Date;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 public class DatabaseQueryService {
     private static final Connection connection = Database.getInstance().getConnection();
-    private static final Map<String, PreparedStatement> statements = new HashMap<>();
+    private static final ConcurrentMap<String, PreparedStatement> statements = new ConcurrentHashMap<>();
 
     private DatabaseQueryService() {
     }
